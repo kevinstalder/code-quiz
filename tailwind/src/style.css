@@ -4,3 +4,58 @@
 body{ 
   font-family: 'Roboto', sans-serif;
 }
+
+/** animation **/
+.animate-me {
+  opacity: 0;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  opacity: 1;
+}
+
+.animated.delay-0-25s {
+  -webkit-animation-delay: 0.25s;
+  animation-delay: 0.25s;
+}
+
+.animated.delay-0-5s {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.animated.delay-0-75s {
+  -webkit-animation-delay: 0.75s;
+  animation-delay: 0.75s;
+}
+@media only screen and (max-width: 1024px) {
+  .delay-0-25s,
+  .delay-0-5s,
+  .delay-0-75s {
+    animation-delay: 0s !important;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  animation-duration: 1.75s;
+}
